@@ -1,4 +1,4 @@
-<ng-container *ngIf="currentRoot">
+<ng-container *ngIf="currentSequence">
   <div class="ktb-sequence-timeline-container">
     <div class="timeline"></div>
     <div fxLayout="row" fxLayoutAlign="space-between">
@@ -11,7 +11,7 @@
           <span [textContent]="stage"></span>
         </div>
         <p class="m-0">|</p>
-        <p class="m-0" [textContent]="currentRoot.getFirstTraceOfStage(stage)?.time | date:'HH:mm'"></p>
+        <p class="m-0" [textContent]="currentSequence.getFirstTraceOfStage(stage)?.time | date:'HH:mm'"></p>
       </div>
     </div>
   </div>
