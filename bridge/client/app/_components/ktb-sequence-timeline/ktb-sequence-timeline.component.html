@@ -2,10 +2,10 @@
   <div class="ktb-sequence-timeline-container">
     <div class="timeline"></div>
     <div fxLayout="row" fxLayoutAlign="space-between">
-      <div class="text-center pointer" *ngFor="let stage of currentRoot.getStages(); last as isLast" (click)="selectStage(stage)">
+      <div class="text-center pointer" *ngFor="let stage of currentSequence.getStages(); last as isLast" (click)="selectStage(stage)">
         <div>
-          <dt-icon *ngIf="currentRoot.getFirstTraceOfStage(stage).isFinished()" class="stage-state-icon event-icon" [name]="currentRoot.getIcon()" [class.error]="stage === currentRoot.isFaulty()" [class.success]="currentRoot.isFinished() && stage !== currentRoot.isFaulty()" ></dt-icon>
-          <button *ngIf="!currentRoot.getFirstTraceOfStage(stage).isFinished()" class="m-0 p-0" dt-button disabled variant="nested">
+          <dt-icon *ngIf="currentSequence.getFirstTraceOfStage(stage).isFinished()" class="stage-state-icon event-icon" [name]="currentSequence.getIcon()" [class.error]="stage === currentSequence.isFaulty()" [class.success]="currentSequence.isFinished() && stage !== currentSequence.isFaulty()" ></dt-icon>
+          <button *ngIf="!currentSequence.getFirstTraceOfStage(stage).isFinished()" class="m-0 p-0" dt-button disabled variant="nested">
             <dt-loading-spinner aria-label="Task is running..."></dt-loading-spinner>
           </button>
           <span [textContent]="stage"></span>
