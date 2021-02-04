@@ -58,7 +58,7 @@ jobs:
 
       - name: Load CI Environemnt from .ci_env
         id: load_ci_env
-        uses: c-py/action-dotenv-to-setenv@v2
+        uses: c-py/action-dotenv-to-setenv@v3
         with:
           env-file: .ci_env
 
@@ -198,7 +198,7 @@ jobs:
 
       - name: 'Get Previous tag'
         id: get_previous_tag
-        uses: "WyriHaximus/github-action-get-previous-tag@1.0.0"
+        uses: "WyriHaximus/github-action-get-previous-tag@v1.0.1"
       - name: 'Get next patch version'
         id: get_next_semver_tag
         uses: "WyriHaximus/github-action-next-semvers@v1.1"
@@ -284,7 +284,7 @@ jobs:
 
       - name: Load CI Environemnt from .ci_env
         id: load_ci_env
-        uses: c-py/action-dotenv-to-setenv@v2
+        uses: c-py/action-dotenv-to-setenv@v3
         with:
           env-file: .ci_env
 
@@ -404,7 +404,7 @@ jobs:
           npm install -g libnpx@10.2.0
       - name: Load CI Environemnt from .ci_env
         id: load_ci_env
-        uses: c-py/action-dotenv-to-setenv@v2
+        uses: c-py/action-dotenv-to-setenv@v3
         with:
           env-file: .ci_env
       - name: Test
@@ -542,7 +542,7 @@ jobs:
 
       - name: Load CI Environemnt from .ci_env
         id: load_ci_env
-        uses: c-py/action-dotenv-to-setenv@v2
+        uses: c-py/action-dotenv-to-setenv@v3
         with:
           env-file: .ci_env
 
@@ -582,7 +582,7 @@ jobs:
 
       - name: Load CI Environemnt from .ci_env
         id: load_ci_env
-        uses: c-py/action-dotenv-to-setenv@v2
+        uses: c-py/action-dotenv-to-setenv@v3
         with:
           env-file: .ci_env
 
